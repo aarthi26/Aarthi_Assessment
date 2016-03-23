@@ -70,6 +70,8 @@
             
         } else {
             //NSLog(@"%@ %@", response, responseObject);
+            
+            // Fetch Data
             NSDictionary *JSON = [NSJSONSerialization JSONObjectWithData: responseObject options: NSJSONReadingMutableContainers error:nil];
             NSLog(@"response:%@",JSON);
             
@@ -140,12 +142,14 @@
     //cell.textLabel.text = [arr_caption objectAtIndex:indexPath.row];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 
+    //Remove Subviews
     if ([cell.contentView subviews]){
         for (UIView *subview in [cell.contentView subviews]) {
             [subview removeFromSuperview];
         }
     }
     
+    //Create UILabel
     UILabel *lbl_myText = [[UILabel alloc]initWithFrame:CGRectZero];
     [lbl_myText setLineBreakMode:NSLineBreakByWordWrapping];
     lbl_myText.minimumScaleFactor = FONT_SIZE;
@@ -178,6 +182,7 @@
     
     [cell.contentView addSubview:lbl_myText];
 
+    //Return cell
     return cell;
     
 

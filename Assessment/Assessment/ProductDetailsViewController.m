@@ -48,6 +48,8 @@
             
         } else {
             //NSLog(@"%@ %@", response, responseObject);
+            
+            //Fetch Data
             NSDictionary *JSON = [NSJSONSerialization JSONObjectWithData: responseObject options: NSJSONReadingMutableContainers error:nil];
             NSLog(@"response:%@",JSON);
             
@@ -61,43 +63,11 @@
             NSNumber *str_price1 = [JSON valueForKey:@"originalPrice"];
             NSString *str_currency = [JSON valueForKey:@"currency"];
             
-            //            NSMutableArray *quickView_array = [temp_array valueForKey:@"modelQuickViewDetails"];
-            //            arr_caption = [quickView_array valueForKey:@"caption"];
-            //            arr_productId = [quickView_array valueForKey:@"prodID"];
-            //            arr_price = [quickView_array valueForKey:@"minPrice"];
-            //            arr_linkURL = [quickView_array valueForKey:@"linkUrl"];
-            //
-            //            NSLog(@"%@",arr_caption);
-            //
-            //            NSLog(@"%@", quickView_array);
-            //
-            NSLog(@"%@", str_price);
-            NSLog(@"%@", arr_temp);
+            //NSLog(@"%@", str_price);
+            //NSLog(@"%@", arr_temp);
            // NSLog(@"%@", arr_description);
             
-            
-            
-            //
-            //            if(temp_array.count == 0)
-            //            {
-            //                //[self showFailedAlert];
-            //            }
-            //
-            //            else
-            //            {
-            //                NSMutableArray *temp_array1 = [temp_array objectAtIndex:0];
-            //
-            //               // arr_result = [temp_array1 valueForKey:@"lf"];
-            //
-            //                // NSLog(@"array:%@",temp_array1);
-            //
-            //                //NSLog(@"meaning:%@",str_meaning);
-            //                //self.lbl_Meaning.text = [arr_result objectAtIndex:0];
-            //               // [self showSuccessAlert];
-            //
-            //            }
-            
-        
+            //Set Label Text
             self.lbl_brand.text = str_brand;
             self.lbl_productId.text = [str_productId stringValue];
             self.lbl_productType.text = str_productType;
