@@ -81,31 +81,11 @@
             arr_caption = [quickView_array valueForKey:@"caption"];
             arr_productId = [quickView_array valueForKey:@"prodID"];
             
-            NSLog(@"%@",arr_caption);
+            //NSLog(@"%@",arr_caption);
             
-            NSLog(@"%@", quickView_array);
+            //NSLog(@"%@", quickView_array);
             
-            NSLog(@"%@", temp_array);
-            
-//            
-//            if(temp_array.count == 0)
-//            {
-//                //[self showFailedAlert];
-//            }
-//            
-//            else
-//            {
-//                NSMutableArray *temp_array1 = [temp_array objectAtIndex:0];
-//                
-//               // arr_result = [temp_array1 valueForKey:@"lf"];
-//                
-//                // NSLog(@"array:%@",temp_array1);
-//                
-//                //NSLog(@"meaning:%@",str_meaning);
-//                //self.lbl_Meaning.text = [arr_result objectAtIndex:0];
-//               // [self showSuccessAlert];
-//                
-//            }
+            //NSLog(@"%@", temp_array);
             
             self.txtField_search.text = @"";
             
@@ -161,7 +141,6 @@
     CGRect screenRect = [[UIScreen mainScreen]bounds];
     CGSize constraint = CGSizeMake(screenRect.size.width - (CELL_CONTENT_MARGIN * 3.8), 20000.0f); //// Here Width = Width you want to define for the label in its frame. The height of the label will be adjusted according to this.
         
-        //CGSize size = [text sizeWithFont:[UIFont systemFontOfSize:FONT_SIZE] constrainedToSize:constraint lineBreakMode:NSLineBreakByWordWrapping];
         
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
         
